@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lobby.gd" type="Script" id=1]
+
+[node name="Lobby" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="V" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Host" type="Button" parent="V"]
+margin_right = 64.0
+margin_bottom = 20.0
+text = "Host"
+
+[node name="Connect" type="Button" parent="V"]
+margin_top = 24.0
+margin_right = 64.0
+margin_bottom = 44.0
+text = "Connect"
+[connection signal="pressed" from="V/Host" to="." method="_on_Host_pressed"]
+[connection signal="pressed" from="V/Connect" to="." method="_on_Connect_pressed"]
